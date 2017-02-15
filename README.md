@@ -1,1 +1,1 @@
-# EM108 Lab work and reports
+# EM108 Lab Work and Reports
