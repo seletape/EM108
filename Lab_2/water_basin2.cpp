@@ -8,7 +8,7 @@ int length;
 
 void input();
 //void volume;
-//void surface_area; 
+//void surface_area;
 
 int main() {
 	cout << "Greetings, if you wouldn't mind filling out the following data. Thanks\n";
@@ -21,7 +21,7 @@ int main() {
 }
 
 void input() {
-	{
+	do{
 		cout << "Please enter length: " << length << "\n";
 		cin >> length;
 
