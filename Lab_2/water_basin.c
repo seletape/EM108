@@ -34,7 +34,7 @@ void input() {
 	printf("\n");
 
 	printf("Please can you enter the amount of paint needed to cover one square meter of a surface: ");
-	scanf("%f", &surface_area);
+	scanf("%f", &paint_required);
 	printf("\n");
 }
 
