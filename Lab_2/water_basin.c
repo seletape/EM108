@@ -39,20 +39,23 @@ void input() {
 }
 
 void volume() {
-	do {
+	if((length != 0) || (width != 0) || (depth != 0)){
+		printf("The volume of water the basin can hold is: %f", length * width * depth);
+		printf("\n");
+	}
+	else {
 		printf("Incorrect value entered, please enter new values.\n");
 		input();
-	} while ((length = 0) || (width = 0) || (depth = 0));
-	printf("The volume of water the basin can hold is: %f", length * width * depth);
-	printf("\n");
-
+	}
 }
 
 void surface_area() {
-	do {
+	if((length != 0) || (width != 0) || (depth != 0)) {
+		printf("The surface area of the basin is: %f", length*width + 2*length*depth + 2*width*depth);
+		printf("\n");
+	}
+	else{
 		printf("Incorrect value entered, please enter new values.\n");
 		input();
-	} while ((length = 0) || (width = 0) || (depth = 0));
-	printf("The surface area of the basin is: %f", length*width + 2*length*depth + 2*width*depth);
-	printf("\n");
+	}
 }
