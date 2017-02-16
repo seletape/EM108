@@ -4,6 +4,7 @@
 float length;
 float width;
 float depth;
+float paint_required;
 
 
 void input();
@@ -30,6 +31,10 @@ void input() {
 
 	printf("Please enter the depth of the container:");
 	scanf("%f", &depth);
+	printf("\n");
+
+	printf("Please can you enter the amount of paint needed to cover one square meter of a surface: ");
+	scanf("%f", &surface_area);
 	printf("\n");
 }
 
