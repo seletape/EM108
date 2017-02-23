@@ -14,8 +14,8 @@ void calculations();
 int main() {
   printf("Welcome to the Weed Killer program.\n");
   input();
-
   calculations();
+  printf("Thanks for using this program.\n");
 
   return 0;
 }
