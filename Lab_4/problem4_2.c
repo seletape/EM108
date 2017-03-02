@@ -1,37 +1,34 @@
-//Set 1 - Problem 4
+//Set 3 - Problem 3
 
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h>
 
-float a;
-float b;
-float c;
-void input();
+int a;
+int b;
+int c;
+int n;
+int i;
+int c;
+void fibonacci();
 
 int main() {
-  printf("Welcome to The Root Calculator!\n");
-  input();
-  printf("The quadratic is: %.3fx^2 + %.3fx + %.3f = 0\n", a,b,c );
-
+  printf("Welcome to The Fibonacci Sequence!\n");
+  a = 1;
+  b = 1;
+  fibonacci();
   return 0;
 }
 
-void input() {
-  printf("Please enter the co-efficient of x^2: ");
-  scanf("%f", &a);
+void fibonacci() {
+  printf("How many numbers would you like to print?");
+  scanf("%d", &n);
   printf("\n");
 
-  printf("Please enter the co-efficients of x: ");
-  scanf("%f", &b);
-  printf("\n");
-
-  printf("Please enter the constant: ");
-  scanf("%f", &c);
-  printf("\n");
-
-  if ((b*b) > (4*a*c)) {
-    printf("Please enter correct co-efficients and constant\n");
-    input();
+  printf("1\n1\n");
+  for(i = 0; i <= n; ++i) {
+    c = a+b;
+    a = b;
+    b = c;
+    printf("%d\n",c);
   }
 }
