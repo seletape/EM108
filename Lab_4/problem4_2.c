@@ -20,9 +20,7 @@ int main() {
 }
 
 void fibonacci() {
-  printf("How many numbers would you like to print?");
-  scanf("%d", &n);
-  printf("\n");
+
 
   printf("1\n1\n");
   for(i = 0; i <= n; ++i) {
