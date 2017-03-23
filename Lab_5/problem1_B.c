@@ -1,4 +1,4 @@
-//Problem 1 - B: Write a program that prints other. Use “for” loops.
+//Problem 1 - B - Star Printing: Write a program that prints the following patterns separately, one below the other. Use “for” loops.
 #include <stdio.h>
 #include <stdlib.h>
 

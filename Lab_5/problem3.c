@@ -24,7 +24,7 @@ int main() {
   FILE *my_stream;
   my_stream = fopen("text.txt", "w");
 
-  printf("Welcome to the Projectile Calculator");
+  printf("Welcome to the Projectile Calculator\n");
   input();
   totals();
   t_increment();
@@ -40,6 +40,9 @@ void input() {
   printf("What is the starting height of the projectile?\n Enter here: ");
   scanf("%f", &h);
   printf("\n");
+  if(h < 0) {
+    input();
+  }
 
   printf("What is the intial velocity of the projectile in the x-direction?\n Enter here: ");
   scanf("%f", &ux);
