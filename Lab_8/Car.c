@@ -8,7 +8,7 @@ typedef struct car {
   char number[9];
   char colour[10];
   float engine;
-  float tax;
+  int tax;
 } car_type;
 
 int option;
@@ -17,10 +17,12 @@ int i;
 void user_menu();
 int tax(car_type cars[],int i);
 
+car_type cars[6];
+
 int main() {
-  car_type cars[6];
   FILE *indata;
   indata = fopen("indata.txt","r");
+
   for (i = 0; i < 6; ++i) {
     fscanf(indata , "%d %s %s %f", &cars[i].year, cars[i].number, cars[i].colour, &cars[i].engine);
 
@@ -28,14 +30,19 @@ int main() {
   printf("Welcome to the Car Registration and Taxation\n");
   user_menu();
 
+
+fclose(indata);
   return 0;
 }
 
 void user_menu() {
+  FILE* outdata;
+  outdata = fopen("outdata.txt", "w");
+
   printf("Please choose one of the options below:\n");
   printf("1.To print the results to the screen only, press 1\n");
   printf("2.To print the results to the file only, press 2\n");
-  printf("3.To print the results to both the screen and file, press3\n");
+  printf("3.To print the results to both the screen and file, press 3\n");
   scanf("%d", &option);
 
   switch(option){
@@ -43,26 +50,31 @@ void user_menu() {
       printf("You picked option 1, print the results to the screen only.\n");
       for (i = 0; i < 6; ++i){
         tax(cars,i);
-        printf("The tax on car %d is: $%f/year\n",i+1, cars[i].tax);
+        printf("The tax on car %d is: €%.3d per year\n",i+1, cars[i].tax);
       }
       break;
     case 2:
       printf("You picked option 2, print the results to the file only.\n");
       for (i = 0; i < 6; ++i){
         tax(cars,i);
+        fprintf(outdata, "The tax on car %d is: €%d\n",i+1, cars[i].tax);
       }
       break;
     case 3:
       printf("You picked option 3, print the results to both the screen and file.\n");
       for (i = 0; i < 6; ++i){
         tax(cars,i);
+        printf("The tax on car %d is: €%.3d per year\n",i+1, cars[i].tax);
+        fprintf(outdata, "The tax on car %d is: €%d\n",i+1, cars[i].tax);
       }
       break;
     default:
       printf("You have made an illegal choice.\n");
       user_menu();
   }
+  fclose(outdata);
 }
+
 int tax(car_type cars[],int i) {
   if(cars[i].year > 2012){
     if(cars[i].engine <= 1.6){

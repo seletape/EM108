@@ -1,0 +1,6 @@
+The tax on car 1 is: €600
+The tax on car 2 is: €400
+The tax on car 3 is: €200
+The tax on car 4 is: €200
+The tax on car 5 is: €600
+The tax on car 6 is: €200
