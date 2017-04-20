@@ -39,5 +39,5 @@ void calculations() {
   printf("The area of the field in square metres is: %f\n", length * width);
   printf("The area of the field in square feet is : %f\n", length * width * 10.7639);
   printf("The volume of weed killer to kill all the weeds in one square metre is: %f\n", weed_killer / (length * width * 10.7639) );
-  printf("The amount of weed killer needed in total is: %f\n", )
+  printf("The amount of weed killer needed in total is: %f\n", (weed_killer / (length * width * 10.7639) ) * weed_killer );
 }

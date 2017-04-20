@@ -12,9 +12,9 @@ void input();
 void calculations();
 
 int main() {
-  printf("Welcome to the Calculator.");
+  printf("Welcome to the Calculator.\n");
   input();
-  
+
   calculations();
   printf("Thank you for using the calculator.\n");
 
